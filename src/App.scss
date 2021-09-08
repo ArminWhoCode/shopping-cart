@@ -1,0 +1,34 @@
+*,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto';
+}
+body {
+  background-color: #26282c;
+}
+a,
+a:active {
+  color: #fff;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+@import './page/Cart.scss';
+@import './Components/Navbar/Navbar.scss';
+@import './Components/Sidebar/Sidebar.scss';
+@import './Components/Hero/Hero.scss';
+@import './Components/About/About.scss';
+@import './Components/Button/Button.scss';
+@import './Components/Tabs/Tab.scss';
+@import './Components/Counter/Counter.scss';
+@import './Components/CartItem/CartItem.scss';
+@import './Components/CartIcon/CartIcon.scss';
+@import './Components/Footer/Footer.scss';

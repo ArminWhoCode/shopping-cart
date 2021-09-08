@@ -1,0 +1,16 @@
+.counter{
+  @include flexbox(center,space-between);
+  width: 30%;
+  max-width: 100px;
+  margin: 1rem 0;
+  svg{
+    cursor: pointer;
+    color: $primary-color;
+    width: 25px;
+    height: 25px;
+    padding: 0.25rem;
+  }
+  button{
+    background-color: transparent;
+  }
+}

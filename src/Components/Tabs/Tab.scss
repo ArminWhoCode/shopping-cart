@@ -1,0 +1,75 @@
+.food-list {
+  width: 90%;
+  margin: 0 auto;
+  @include flexbox(center,center,column);
+  color: #fff;
+  margin-top: 3rem;
+  max-width: 1100px;
+  h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    color: transparent;
+    -webkit-text-stroke: 2px $secondary-color;
+    text-shadow: 4px 4px 10px $secondary-color;
+  }
+  .tab {
+    &__category {
+      @include flexbox(null,space-around);
+      width: 90%;
+      padding: 0.5rem;
+      margin: 1rem 0 3rem;
+      background-color: lighten($color: $dark-color, $amount: 5);
+      border-radius: 20px;
+      max-width: 600px;
+      .category {
+        cursor: pointer;
+        text-transform: capitalize;
+        padding: 0.5rem;
+        &.active {
+          color: $secondary-color;
+        }
+      }
+    }
+    &__list {
+      display: grid;
+      width: 90%;
+      grid-template-columns: 1fr;
+      grid-gap: 1.5rem;
+      margin-bottom: 4rem;
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    &__item {
+      margin: 0 auto;
+      background-color: lighten($color: $dark-color, $amount: 5);
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 0.25rem;
+      @include flexbox(center,center,column);
+      img {
+        width: 250px;
+        height: 250px;
+        border-radius: 8px;
+      }
+      button{
+        margin: 1rem;
+        padding: 0.5rem 4rem;
+      }
+    }
+    &__price {
+      width: 40%;
+      @include flexbox(center,space-around);
+      font-size: 0.75rem;
+      margin: 1rem 0 0.5rem;
+    }
+    &__title {
+      text-align: center;
+      font-size: 1.25rem;
+      margin: 0.25rem 0 1rem;
+    }
+  }
+}

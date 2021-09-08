@@ -1,0 +1,57 @@
+.nav {
+  width: 100%;
+  @include flexbox(center, space-between);
+  height: 3rem;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.3s ease;
+  &.sticky {
+    top: 0;
+    box-shadow: 0 10px 20px
+      rgba($color: rgb(59, 59, 59), $alpha: 1);
+    background-color: $primary-color;
+  }
+  &.hide {
+    top: -100%;
+  }
+  &__toggle {
+    color: #fff;
+    background-color: transparent;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    @include desktop {
+      display: none;
+    }
+  }
+  &__links {
+    display: none;
+    flex-grow: 1;
+    margin-right: 2rem;
+    @include desktop {
+      a {
+        text-transform: capitalize;
+        transition: color 0.3s ease-in;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+      width: 20%;
+      @include flexbox(center, space-between);
+    }
+  }
+}
+.left {
+  @include flexbox(center,space-between);
+  @include desktop {
+    min-width: 280px;
+  }
+  svg {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+}
